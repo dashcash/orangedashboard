@@ -27,5 +27,3 @@ class Dashing.Appstore extends Dashing.Widget
     widget.find('.appstore-last-review-last-description').html('<span>' + last_version.reviews.last.description + '</span>')
 
     widget.find('.appstore-all-footer-lastupdate').html('<span>Last update: ' + all_versions.last_update +  '</span>')
-
-    docker run -d -p 80:3030 -v ./dashboards:/dashboards -v ./jobs:/jobs -v ./widgets:/widgets -e GEMS="rest-client json" rgcamus/alpine_smashing
