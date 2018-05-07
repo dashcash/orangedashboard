@@ -1,0 +1,106 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #999;
+$title-color:       #ec663c;
+
+// ----------------------------------------------------------------------------
+// Widget-comment styles
+// ----------------------------------------------------------------------------
+.widget-appstore {
+
+  background: $background-color url('../assets/apple_logo.png') no-repeat 50% 50%;
+
+  .title {
+    font-weight: bold;
+    color: $title-color;
+    opacity: .9;
+    font-size: 48px
+  }
+
+  .footer {
+	  font-size: 14px;
+	  font-style: italic;
+  }
+
+  .appstore-container {
+    div > div {
+      font-size: 24px;
+      font-weight: bold;
+	    text-decoration: underline;
+    }
+  }
+
+// ----------------------------------------------------------------------------
+// Last version styles
+// ----------------------------------------------------------------------------
+
+  .appstore-last-rating-value {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .appstore-last-voters-count {
+    font-size: 16px;
+  }
+
+  .appstore-last-review-first-author-rating {
+      font-size: 16px;
+  }
+
+  .appstore-last-review-first-title {
+      font-size: 12px;
+      font-weight: bold;
+  }
+
+  .appstore-last-review-first-description {
+      font-size: 12px;
+	    font-style: italic;
+  }
+
+  .appstore-last-review-second-author-rating {
+      font-size: 16px;
+  }
+
+  .appstore-last-review-second-title {
+      font-size: 12px;
+      font-weight: bold;
+  }
+
+  .appstore-last-review-second-description {
+      font-size: 12px;
+      font-style: italic;
+  }
+
+  .appstore-last-review-last-author-rating {
+      font-size: 16px;
+  }
+
+  .appstore-last-review-last-title {
+      font-size: 12px;
+      font-weight: bold;
+  }
+
+  .appstore-last-review-last-description {
+      font-size: 12px;
+      font-style: italic;
+  }
+
+// ----------------------------------------------------------------------------
+// All versions styles
+// ----------------------------------------------------------------------------
+
+  .appstore-all-rating-value {
+    font-size: 48px;
+    font-weight: bold;
+  }
+
+  .appstore-all-voters-count {
+    font-size: 16px;
+  }
+
+  .appstore-all-footer-lastupdate {
+	  font-size: 14px;
+  }
+
+}
