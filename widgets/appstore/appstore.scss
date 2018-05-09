@@ -27,13 +27,18 @@ $title-color:       #ec663c;
     div > div {
       font-size: 24px;
       font-weight: bold;
-	    text-decoration: underline;
     }
   }
 
 // ----------------------------------------------------------------------------
 // Last version styles
 // ----------------------------------------------------------------------------
+
+  .appstore-last-version {
+    font-size: 48px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
   .appstore-last-rating-value {
     font-size: 48px;
@@ -89,6 +94,12 @@ $title-color:       #ec663c;
 // ----------------------------------------------------------------------------
 // All versions styles
 // ----------------------------------------------------------------------------
+
+  .appstore-all-version {
+    font-size: 48px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
 
   .appstore-all-rating-value {
     font-size: 48px;
