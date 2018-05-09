@@ -8,10 +8,12 @@ class Dashing.Appstore extends Dashing.Widget
     last_version = @get('last_version')
     all_versions = @get('all_versions')
 
-    widget.find('.appstore-last-rating-value').html('<div>V' + last_version.version_number + '- Average Rating</div><span>' + last_version.average_rating + '/5' + '</span>')
+    widget.find('.appstore-last-version').html('<div>V' + last_version.version_number + '</div>')
+    widget.find('.appstore-last-rating-value').html('<div>' + last_version.average_rating + '/5</div>')
     widget.find('.appstore-last-voters-count').html('<span>' + last_version.voters_count + '</span> Votes')
 
-    widget.find('.appstore-all-rating-value').html('<div>All- Average Rating</div><span >' + all_versions.average_rating + '/5' + '</span>')
+    widget.find('.appstore-all-version').html('<div>All</div>')
+    widget.find('.appstore-all-rating-value').html('<div>' + all_versions.average_rating + '/5' + '</div>')
     widget.find('.appstore-all-voters-count').html('<span>' + all_versions.voters_count + '</span> Votes')
 
     widget.find('.appstore-last-review-first-author-rating').html('<div>Latest reviews</div><br/><span>' + last_version.reviews.first.author + ' - ' + last_version.reviews.first.version + ' - ' + last_version.reviews.first.rating + '/5' +  '</span>')
