@@ -1,4 +1,4 @@
-class Dashing.Appstore extends Dashing.Widget
+class Dashing.AppstoreMs extends Dashing.Widget
   ready: ->
     @onData(this)
 
@@ -10,7 +10,7 @@ class Dashing.Appstore extends Dashing.Widget
 
     widget.find('.appstore-last-version').html('<div>V' + last_version.version_number + '</div>')
     widget.find('.appstore-last-rating-value').html('<div>' + last_version.average_rating + '/5</div>')
-    widget.find('.appstore-last-voters-count').html('<span>' + last_version.voters_count + '</span> Votes')
+    widget.find('.appstore-last-voters-count').html('<span>' + last_version.voters_count + '</span> Votes (' + last_version.votes_diff + ')')
 
     widget.find('.appstore-all-version').html('<div>All</div>')
     widget.find('.appstore-all-rating-value').html('<div>' + all_versions.average_rating + '/5' + '</div>')

@@ -1,13 +1,13 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #999;
-$title-color:       #ec663c;
+$background-color:  #ff7900;
+$title-color:       #ffffff;
 
 // ----------------------------------------------------------------------------
 // Widget-comment styles
 // ----------------------------------------------------------------------------
-.widget-appstore {
+.widget-appstore-oem {
 
   background: $background-color url('../assets/apple_logo.png') no-repeat 50% 50%;
 
@@ -15,7 +15,7 @@ $title-color:       #ec663c;
     font-weight: bold;
     color: $title-color;
     opacity: .9;
-    font-size: 48px
+    font-size: 36px
   }
 
   .footer {

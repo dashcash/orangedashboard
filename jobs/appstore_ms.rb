@@ -14,6 +14,8 @@ MS_APP_ID = '553791662'
 MS_APP_COUNTRY = 'fr'
 
 client = HTTPClient.new
+lastNBVotes = 0
+currentNBVotes = 0
 
 SCHEDULER.every '5m', :first_in => 0 do |job|
   time = Time.new
@@ -25,6 +27,7 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
       version_number: 0.0,
       average_rating: 0.0,
       voters_count: 0,
+      votes_diff: 0,
       :reviews => {
         :first => {
           author: "",
@@ -50,6 +53,7 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
       }
     },
     :all_versions => {
+      application_code: "",
       average_rating: 0.0,
       voters_count: 0,
       last_update: 0
@@ -62,9 +66,14 @@ SCHEDULER.every '5m', :first_in => 0 do |job|
 
     ratings_result = JSON.parse(ratings_res.content)['results'][0]
 
+    lastNBVotes = currentNBVotes
+    currentVersionVotes = ratings_result['userRatingCountForCurrentVersion']
+    diffVotes = currentNBVotes - lastNBVotes;
+
     data[:last_version][:version_number] = ratings_result['version']
     data[:last_version][:average_rating] = ratings_result['averageUserRatingForCurrentVersion']
     data[:last_version][:voters_count] = ratings_result['userRatingCountForCurrentVersion']
+    data[:last_version][:votes_diff] = diffVotes
     data[:all_versions][:average_rating] = ratings_result['averageUserRating']
     data[:all_versions][:voters_count] = ratings_result['userRatingCount']
     data[:all_versions][:last_update] = time
