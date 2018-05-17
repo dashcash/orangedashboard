@@ -1,0 +1,13 @@
+# COLOR GUIDE
+# holiday = lightgreen
+# deadline = red
+# release = pink
+# misc = white
+
+events:
+  - name: "Code Freeze"
+    date: "Nov 25, 2018"
+    background: "lightblue"
+  - name: "Holiday Breakfast"
+    date: "Dec 10, 2018"
+    background: "white"
