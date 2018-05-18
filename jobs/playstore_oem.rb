@@ -10,7 +10,7 @@ SCHEDULER.every '4h', :first_in => 0 do |job|
     }
   }
   begin
-    config_file = File.dirname(File.expand_path(__FILE__)) + '/../config/google.yml'
+    config_file = File.dirname(File.expand_path(__FILE__)) + '/../config/playstore_oem.yml'
     config = YAML::load(File.open(config_file))
     app = MarketBot::Play::App.new(config['app_identifier'])
     app.update
@@ -33,7 +33,7 @@ SCHEDULER.every '4h', :first_in => 0 do |job|
   end
 
   if defined?(send_event)
-    send_event('Google', data)
+    send_event('playstore_oem', data)
   end
 
 end
